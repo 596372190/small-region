@@ -764,9 +764,9 @@ public class MinimumCloseArea {
                     List<Line> aLines = associated.getLines();
                     if (aLines.get(j).isReverse(currentLine)) {
                         //从象限角排序数组中找到方向线段的下一个位置的线段
-                        if (j == (aLines.size() - 1)) {
+                        if (j == (aLines.size() - 1)) {//最后一条找到的  就取第一条为nextline
                             return aLines.get(0);
-                        } else {
+                        } else {//如果不是最后一条 就取下一条为nextLine  按逆时针取
                             return aLines.get(j + 1);
                         }
                     }
